@@ -1,0 +1,124 @@
+
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    overflow: hidden;
+    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    background-size: 400% 400%;
+    animation: gradientAnimation 2s ease infinite;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .transaction-list {
+    background: rgba(30, 30, 47, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    backdrop-filter: blur(10px);
+  }
+  
+  .transaction-list h3 {
+    text-align: center;
+    color: #61dafb;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+  }
+  
+  .address-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .address-input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .reload-button {
+    background: #61dafb;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #1e1e2f;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .reload-button:hover {
+    background: #4fc3f7;
+  }
+  
+  .reload-button:disabled {
+    background: #888;
+    cursor: not-allowed;
+  }
+  
+  .transaction-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .transaction-list li {
+    background: #29294d;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .transaction-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .transaction-list li p {
+    margin: 5px 0;
+  }
+  
+  .transaction-list li strong {
+    color: #ff6b6b;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .transaction-list li {
+    animation: fadeIn 0.5s ease-in-out forwards;
+    opacity: 0;
+  }
+  
